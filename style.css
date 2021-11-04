@@ -114,7 +114,7 @@ li {
 }
 
 #downloadbtn-installer {
-    background-color: #4CAF50;
+    background-color: #d400ff;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -126,14 +126,17 @@ li {
     cursor: pointer;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
+    border-radius: 14px;
+    border:6px solid #d400ff   
 }
 
 #downloadbtn-installer:hover {
+    background-color: #ff00ff;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 #downloadbtn-zip {
-    background-color: #4CAF50;
+    background-color: #d400ff;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -145,6 +148,8 @@ li {
     cursor: pointer;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
+    border-radius: 14px;
+    border:6px solid #d400ff   
 }
 
 .version {
@@ -153,6 +158,7 @@ li {
 }
 
 #downloadbtn-zip:hover {
+    background-color: #ea00ff;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -171,9 +177,12 @@ li {
     cursor: pointer;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
+    border-radius: 14px;
+    border:6px solid #d400ff    
 }
 
 #button:hover {
+    background-color: #ea00ff;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -234,6 +243,7 @@ li {
     border: none;
 }
 
+
 #down-scroller {
     display: none;
     position: fixed;
@@ -243,15 +253,17 @@ li {
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: rgb(153, 0, 255);
+    background-color: #d400ff;
     color: white;
     cursor: pointer;
-    padding: 15px;
-    border-radius: 4px;
+    padding: 18px;
+    border-radius: 26px;
+    border:5px round #d400ff;
+    width:53px
 }
 
 #down-scroller:hover {
-    background-color: #555;
+    background-color: #ea00ff;
 }
 
 .home-sub-head {
@@ -273,15 +285,17 @@ li {
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: rgb(153, 0, 255);
+    background-color: #d400ff;
     color: white;
     cursor: pointer;
-    padding: 15px;
-    border-radius: 4px;
+    padding: 18px;
+    border-radius: 26px;
+    border:5px round #d400ff;
+    width:53px
 }
 
 #up-scroller:hover {
-    background-color: #555;
+    background-color: #ea00ff;
 }
 
 .sidenav a:hover {
@@ -349,6 +363,8 @@ li {
     margin: auto;
     width: 15%;
     padding: 10px;
+    border-radius: 14px;
+    border:6px solid #d400ff
 }
 
 .python {
@@ -365,5 +381,6 @@ li {
 }
 
 #hm-dw-btn:hover {
+    background-color: #ea00ff;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
