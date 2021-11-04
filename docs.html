@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./font.css" />
+    <link rel="icon" href="icon.ico" />
+    <title>Margray</title>
+    <script src="main.js" type="text/javascript"></script>
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+      data-auto-a11y="true"
+    ></script>
+  </head>
+  <body>
+  <div style="display: inline">
+      <span style="font-size:30px;cursor:pointer;margin-left:10px;" onclick="openSideNav()">&#9776; Menu</span>
+      <div id="head"><h1 class="heading" id="heading">Margray Game Engine</h1></div>   
+  </div>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()"
+        >&times;</a
+      >
+      <p id="pages-button">Pages</p>
+      <div id="pages">
+          <a href="home.html">Home</a>
+          <a href="downloads.html">Downloads</a>
+          <a href="example.html">Examples</a>
+      </div>
+      <p id="pages-button">Contents</p>
+      <div id="contents">
+        <a href="#sprite">Sprite</a>
+        <a href="#ts">Transparent sprite</a>
+        <a href="#bg">Background image</a>
+        <a href="#btn">Button</a>
+        <a href="#imb">Image button</a>
+        <a href="#fps">Fps</a>
+        <a href="#is">Image sprite</a>
+        <a href="#as">Animated sprite</a>
+        <a href="#txt">Text</a>
+        <a href="#at">Animated text</a>
+        <a href="#img">Image</a>
+        <a href="#event">The Event Handler</a>
+        <a href="#keys">The "Keys" class</a>
+        <a href="#oc">Other Constants</a>
+        <br/>
+        <br/>
+      </div>
+    </div>
+    <div id="main">
+      <h2 id="heading" class="heading">Documentation</h2>
+      <button onclick="scrollDocsHead()" id="up-scroller" title="Go to top">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+      </button>
+
+      <button onclick="scrollDocsDown()" id="down-scroller" title="Go to down">
+        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+      </button>
+
+      <h2 class="subheading">Functions</h2>
+      <li>
+        <code class="code">create_screen(resolution) -> None</code>
+        <p class="description">Creates a basic screen</p>
+      </li>
+      <li>
+        <code class="code">set_caption(text, iconTitle=None) -> None</code>
+        <p class="description">
+          Sets the caption of the screen (iconTitle if given)
+        </p>
+      </li>
+
+      <li>
+        <code class="code">set_bgcolor(rgb) -> None</code>
+        <p class="description">Sets the Background color of the screen</p>
+      </li>
+      <li>
+        <code class="code">set_icon(path) -> None</code>
+        <p class="description">Sets the icon of the screen</p>
+      </li>
+
+      <li>
+        <code class="code">get_size() -> tuple</code>
+        <p class="description">Returns the size of the screen</p>
+      </li>
+      <li>
+        <code class="code">get_width() -> float|int</code>
+        <p class="description">Returns the width of the screen</p>
+      </li>
+
+      <li>
+        <code class="code">get_height() -> float|int</code>
+        <p class="description">Returns the height of the screen</p>
+      </li>
+      <li>
+        <code class="code">flip_display() -> None</code>
+        <p class="description">Flips the display</p>
+      </li>
+      <li>
+        <code class="code">get_display() -> pygame.display</code>
+        <p class="description">Returns pygame.display</p>
+      </li>
+      <li>
+        <code class="code">quit()</code>
+        <p class="description">Quits the program</p>
+      </li>
+      <li>
+        <code class="code">run() -> List[Event]</code>
+        <p class="description">Runs the application and returns the events</p>
+      </li>
+      <li>
+        <code class="code">update() -> None</code>
+        <p class="description">Updates all the components in the application</p>
+      </li>
+      <div id="ts">
+        <li>
+          <code class="code">transparent_sprite(self,position,size)</code>
+          <p class="description">
+            A sprite that is not visible but can be controlled
+          </p>
+        </li>
+      </div>
+      <li class="subli">
+        <code class="subsubcode">draw()</code>
+        <p class="description">Draws the sprite to the screen</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_rect() -> pygame.Rect</code>
+        <p class="description">Returns the pygame rect of the sprite</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">setX(Xposition)</code>
+        <p class="description">
+          Changes the x position of the sprite to the specified position
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">setY(Yposition)</code>
+        <p class="description">
+          Changes the y position of the sprite to the specified position
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">setPosition(position)</code>
+        <p class="description">
+          Changes the y position of the sprite to the specified position
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_position() -> tuple</code>
+        <p class="description">Returns the position of the sprite</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">get_XPosition() -> float|int</code>
+        <p class="description">Returns the X position of the sprite</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_YPosition() -> float|int</code>
+        <p class="description">
+          Changes the y position of the sprite to the specified position
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">setSize(size)</code>
+        <p class="description">
+          Changes the size of the sprite to the specified size
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">disableMovement()</code>
+        <p class="description">
+          Disable the movement of the sprite (moveUp, moveDown etc)
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">enableMovement()</code>
+        <p class="description">
+          Enables the movement of the sprite (if the disableMovement is used)
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">moveUp(velocity)</code>
+        <p class="description">Moves the sprite up on the specified velocity</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">moveDown(velocity)</code>
+        <p class="description">
+          Moves the sprite down on the specified velocity
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">moveLeft(velocity)</code>
+        <p class="description">
+          Moves the sprite left on the specified velocity
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">moveRight(velocity)</code>
+        <p class="description">
+          Moves the sprite right on the specified velocity
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_size() -> tuple</code>
+        <p class="description">Returns the size of the sprite</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_width() -> float|int</code>
+        <p class="description">Returns the width of the sprite</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_height() -> float|int</code>
+        <p class="description">Returns the height of the sprite</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">shrink(by)</code>
+        <p class="description">
+          decreases the height and width by dividing by the given amount
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">setPosToCursorPos(x, y, center)</code>
+        <p class="description">
+          Sets the position of the sprite to the cursor x,y if they are True
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">disableSetPosToCursorPos()</code>
+        <p class="description">Stops the sprite from following the cursor</p>
+      </li>
+      <div id="bg">
+        <li>
+          <code class="code">background_image(image_path,optionalSize)</code>
+          <p class="description">
+            Initializes the background with the specified image
+          </p>
+        </li>
+      </div>
+      <li class="subli">
+        <code class="subsubcode">setBackground()</code>
+        <p class="description">Sets the initialized background</p>
+      </li>
+      <div id="imb">
+        <li>
+          <code class="code"
+            >image_button(image_path, x, y, size, hoveredCallback,
+            pressedCallback)</code
+          >
+          <p class="description">Creates the button with image</p>
+        </li>
+      </div>
+      <li class="subli">
+        <code class="subsubcode">convert_Alpha()</code>
+        <p class="description">Converts the alpha of the image</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">set_colorkey()</code>
+        <p class="description">sets the color key of the image</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">activateEvents()</code>
+        <p class="description">Activates the events</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">draw()</code>
+        <p class="description">Draws the button</p>
+      </li>
+      <div id="sprite">
+        <li>
+          <code class="code">sprite(color,position,size)</code>
+          <p class="description">
+            Creates a square sprite with the specified color, position and size
+          </p>
+        </li>
+      </div>
+      <li class="subli">
+        <code class="subsubcode">draw()</code>
+        <p class="description">Draws the sprite to the screen</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_rect() -> pygame.Rect</code>
+        <p class="description">Returns the pygame rect of the sprite</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">setX(Xposition)</code>
+        <p class="description">
+          Changes the x position of the sprite to the specified position
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">setY(Yposition)</code>
+        <p class="description">
+          Changes the y position of the sprite to the specified position
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">setPosition(position)</code>
+        <p class="description">
+          Changes the y position of the sprite to the specified position
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_position() -> tuple</code>
+        <p class="description">Returns the position of the sprite</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">get_XPosition() -> float|int</code>
+        <p class="description">Returns the X position of the sprite</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_YPosition() -> float|int</code>
+        <p class="description">
+          Changes the y position of the sprite to the specified position
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">setSize(size)</code>
+        <p class="description">
+          Changes the size of the sprite to the specified size
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">disableMovement()</code>
+        <p class="description">
+          Disable the movement of the sprite (moveUp, moveDown etc)
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">enableMovement()</code>
+        <p class="description">
+          Enables the movement of the sprite (if the disableMovement is used)
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">moveUp(velocity)</code>
+        <p class="description">Moves the sprite up on the specified velocity</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">moveDown(velocity)</code>
+        <p class="description">
+          Moves the sprite down on the specified velocity
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">moveLeft(velocity)</code>
+        <p class="description">
+          Moves the sprite left on the specified velocity
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">moveRight(velocity)</code>
+        <p class="description">
+          Moves the sprite right on the specified velocity
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_size() -> tuple</code>
+        <p class="description">Returns the size of the sprite</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_width() -> float|int</code>
+        <p class="description">Returns the width of the sprite</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_height() -> float|int</code>
+        <p class="description">Returns the height of the sprite</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">shrink(by)</code>
+        <p class="description">
+          decreases the height and width by dividing by the given amount
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">setPosToCursorPos(x, y, center)</code>
+        <p class="description">
+          Sets the position of the sprite to the cursor x,y if they are True
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">disableSetPosToCursorPos()</code>
+        <p class="description">Stops the sprite from following the cursor</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode"
+          >addGravity(gravityPower, floorSprite_or_limit)</code
+        >
+        <p class="description">Adds the gravity to the sprite</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">mouseHovered()</code>
+        <p class="description">
+          Returns if the mouse is hovering over the sprite
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">mousePressedOver(event)</code>
+        <p class="description">
+          Returns if the mouse is pressing the sprite (the Event should be
+          EventHandler class)
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">isCollidingSprite(sprite)</code>
+        <p class="description">
+          Returns if the sprite is colliding with another sprite
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">collidingEdges()</code>
+      </li>
+      <li class="subsubli">
+        <code class="subsubcode">get_colliding_Edge() -> str</code>
+        <p class="description">
+          Returns the side where the sprite is colliding
+        </p>
+      </li>
+      <li class="subsubli">
+        <code class="subsubcode">get_x_or_y() -> str</code>
+        <p class="description">
+          Returns the whether the sprite is colliding on y direction or x
+          direction
+        </p>
+      </li>
+      <li class="subsubli">
+        <code class="subsubcode">get() -> tuple</code>
+        <p class="description">
+          Returns both get_x_or_y() and get_colliding_Edge()
+        </p>
+      </li>
+      <li class="subsubli">
+        <code class="subsubcode">isColliding() -> bool</code>
+        <p class="description">Returns if the sprite is colliding any side</p>
+      </li>
+      <div id="fps">
+        <li>
+          <code class="code">fps()</code>
+          <p class="description">Returns the fps class</p>
+        </li>
+      </div>
+        <li class="subli">
+          <code class="subsubcode">setMaxFPS(fps)</code>
+          <p class="description">Sets the max fps</p>
+        </li>
+      <li class="subli">
+        <code class="subsubcode">getFPS(fps)</code>
+        <p class="description">Returns the fps</p>
+      </li>
+      <div id="btn">
+        <li class="li">
+          <code class="code"
+            >create_button(text, position, size, font, fontColor, fontSize,
+            bg_color, hovered_bg_color, pressed_callback, padding_Y, padding_X,
+            hovered_callback)</code
+          >
+          <p class="description">
+            Creates a button with the specified text,size etc
+          </p>
+        </li>
+      </div>
+      <li class="subli">
+        <code class="subsubcode">activateEvents(event)</code>
+        <p class="description">Activates the events</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">draw()</code>
+        <p class="description">Draws the button</p>
+      </li>
+      <div id="is">
+        <li class="li">
+          <code class="code"
+            >image_sprite(image_path,x=50,y=50,size=None)</code
+          >
+          <p class="description">Creates a sprite with image</p>
+        </li>
+      </div>
+      <li class="subli">
+        <code class="subsubcode">draw()</code>
+        <p class="description">Draws the sprite to the screen</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_rect() -> pygame.Rect</code>
+        <p class="description">Returns the pygame rect of the sprite</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">setX(Xposition)</code>
+        <p class="description">
+          Changes the x position of the sprite to the specified position
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">setY(Yposition)</code>
+        <p class="description">
+          Changes the y position of the sprite to the specified position
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">setPosition(position)</code>
+        <p class="description">
+          Changes the y position of the sprite to the specified position
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_position() -> tuple</code>
+        <p class="description">Returns the position of the sprite</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">get_XPosition() -> float|int</code>
+        <p class="description">Returns the X position of the sprite</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_YPosition() -> float|int</code>
+        <p class="description">
+          Changes the y position of the sprite to the specified position
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">convert_Alpha()</code>
+        <p class="description">Converts the alpha of the image</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">set_colorkey()</code>
+        <p class="description">sets the color key of the image</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">setSize(size)</code>
+        <p class="description">
+          Changes the size of the sprite to the specified size
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">disableMovement()</code>
+        <p class="description">
+          Disable the movement of the sprite (moveUp, moveDown etc)
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">enableMovement()</code>
+        <p class="description">
+          Enables the movement of the sprite (if the disableMovement is used)
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">moveUp(velocity)</code>
+        <p class="description">Moves the sprite up on the specified velocity</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">moveDown(velocity)</code>
+        <p class="description">
+          Moves the sprite down on the specified velocity
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">moveLeft(velocity)</code>
+        <p class="description">
+          Moves the sprite left on the specified velocity
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">moveRight(velocity)</code>
+        <p class="description">
+          Moves the sprite right on the specified velocity
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_size() -> tuple</code>
+        <p class="description">Returns the size of the sprite</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_width() -> float|int</code>
+        <p class="description">Returns the width of the sprite</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_height() -> float|int</code>
+        <p class="description">Returns the height of the sprite</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">shrink(by)</code>
+        <p class="description">
+          decreases the height and width by dividing by the given amount
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">setPosToCursorPos(x, y, center)</code>
+        <p class="description">
+          Sets the position of the sprite to the cursor x,y if they are True
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">disableSetPosToCursorPos()</code>
+        <p class="description">Stops the sprite from following the cursor</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode"
+          >addGravity(gravityPower, floorSprite_or_limit)</code
+        >
+        <p class="description">Adds the gravity to the sprite</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">mouseHovered()</code>
+        <p class="description">
+          Returns if the mouse is hovering over the sprite
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">mousePressedOver(event)</code>
+        <p class="description">
+          Returns if the mouse is pressing the sprite (the Event should be
+          EventHandler class)
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">isCollidingSprite(sprite)</code>
+        <p class="description">
+          Returns if the sprite is colliding with another sprite
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">collidingEdges()</code>
+      </li>
+      <li class="subsubli">
+        <code class="subsubcode">get_colliding_Edge() -> str</code>
+        <p class="description">
+          Returns the side where the sprite is colliding
+        </p>
+      </li>
+      <li class="subsubli">
+        <code class="subsubcode">get_x_or_y() -> str</code>
+        <p class="description">
+          Returns the whether the sprite is colliding on y direction or x
+          direction
+        </p>
+      </li>
+      <li class="subsubli">
+        <code class="subsubcode">get() -> tuple</code>
+        <p class="description">
+          Returns both get_x_or_y() and get_colliding_Edge()
+        </p>
+      </li>
+      <li class="subsubli">
+        <code class="subsubcode">isColliding() -> bool</code>
+        <p class="description">Returns if the sprite is colliding any side</p>
+      </li>
+      <div id="as">
+        <li>
+          <code class="code"
+            >animated_sprite(image_paths,x,y,size,startingIndex)</code
+          >
+          <p class="description">
+            Creates a sprite with animation with a list of images
+          </p>
+        </li>
+      </div>
+      <li class="subli">
+        <code class="subsubcode">appendImage(image)</code>
+        <p class="description">Append a image to the animation</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">setImages(image_paths)</code>
+        <p class="description">Changes the images of animation</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">replaceImageOnIndex(index,image_path)</code>
+        <p class="description">
+          Replace an image on the given index with the new image
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">setCurrentIndex(index)</code>
+        <p class="description">Set the current index to the specified index</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">pauseAnimation(self,image_index)</code>
+        <p class="description">
+          Pause the animation and sets the current image to the image in
+          specified image_index (if given)
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">resumeAnimation()</code>
+        <p class="description">Resumes the animation if animation is paused</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">insertImageBeforeIndex(index,image_path)</code>
+        <p class="description">Inserts the given image on the index</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">getCurrentIndex()</code>
+        <p class="description">Returns the current index</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">animate(frameRate)</code>
+        <p class="description">Animates the sprite on given frameRate</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">incrementIndex()</code>
+        <p class="description">
+          Increments the current index and sets to 0 if index is greater than
+          the size of the list
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">setFrameRate()</code>
+        <p class="description">Sets the frameRate of the animation</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">flip_x()</code>
+        <p class="description">Flips the image in x</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">flip_y()</code>
+        <p class="description">Flips the image in y</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">flip()</code>
+        <p class="description">Flips the image in x and y</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">draw()</code>
+        <p class="description">Draws the sprite to the screen</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_rect() -> pygame.Rect</code>
+        <p class="description">Returns the pygame rect of the sprite</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">setX(Xposition)</code>
+        <p class="description">
+          Changes the x position of the sprite to the specified position
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">setY(Yposition)</code>
+        <p class="description">
+          Changes the y position of the sprite to the specified position
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">setPosition(position)</code>
+        <p class="description">
+          Changes the y position of the sprite to the specified position
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_position() -> tuple</code>
+        <p class="description">Returns the position of the sprite</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">get_XPosition() -> float|int</code>
+        <p class="description">Returns the X position of the sprite</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_YPosition() -> float|int</code>
+        <p class="description">
+          Changes the y position of the sprite to the specified position
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">setSize(size)</code>
+        <p class="description">
+          Changes the size of the sprite to the specified size
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">disableMovement()</code>
+        <p class="description">
+          Disable the movement of the sprite (moveUp, moveDown etc)
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">enableMovement()</code>
+        <p class="description">
+          Enables the movement of the sprite (if the disableMovement is used)
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">moveUp(velocity)</code>
+        <p class="description">Moves the sprite up on the specified velocity</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">moveDown(velocity)</code>
+        <p class="description">
+          Moves the sprite down on the specified velocity
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">moveLeft(velocity)</code>
+        <p class="description">
+          Moves the sprite left on the specified velocity
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">moveRight(velocity)</code>
+        <p class="description">
+          Moves the sprite right on the specified velocity
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_size() -> tuple</code>
+        <p class="description">Returns the size of the sprite</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_width() -> float|int</code>
+        <p class="description">Returns the width of the sprite</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">get_height() -> float|int</code>
+        <p class="description">Returns the height of the sprite</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">shrink(by)</code>
+        <p class="description">
+          decreases the height and width by dividing by the given amount
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">setPosToCursorPos(x, y, center)</code>
+        <p class="description">
+          Sets the position of the sprite to the cursor x,y if they are True
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">disableSetPosToCursorPos()</code>
+        <p class="description">Stops the sprite from following the cursor</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode"
+          >addGravity(gravityPower, floorSprite_or_limit)</code
+        >
+        <p class="description">Adds the gravity to the sprite</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">mouseHovered()</code>
+        <p class="description">
+          Returns if the mouse is hovering over the sprite
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">mousePressedOver(event)</code>
+        <p class="description">
+          Returns if the mouse is pressing the sprite (the Event should be
+          EventHandler class)
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">isCollidingSprite(sprite)</code>
+        <p class="description">
+          Returns if the sprite is colliding with another sprite
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">collidingEdges()</code>
+      </li>
+      <li class="subsubli">
+        <code class="subsubcode">get_colliding_Edge() -> str</code>
+        <p class="description">
+          Returns the side where the sprite is colliding
+        </p>
+      </li>
+      <li class="subsubli">
+        <code class="subsubcode">get_x_or_y() -> str</code>
+        <p class="description">
+          Returns the whether the sprite is colliding on y direction or x
+          direction
+        </p>
+      </li>
+      <li class="subsubli">
+        <code class="subsubcode">get() -> tuple</code>
+        <p class="description">
+          Returns both get_x_or_y() and get_colliding_Edge()
+        </p>
+      </li>
+      <li class="subsubli">
+        <code class="subsubcode">isColliding() -> bool</code>
+        <p class="description">Returns if the sprite is colliding any side</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">convert_Alpha()</code>
+        <p class="description">Converts the alpha of the image</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">set_colorkey()</code>
+        <p class="description">sets the color key of the image</p>
+      </li>
+      <div id="at">
+        <li>
+          <code class="code"
+            >animated_text(textlist, duration, startingIndex, position, font,
+            fontSize, color, bg_color)</code
+          >
+          <p class="description">Returns the fps class</p>
+        </li>
+      </div>
+      <li class="subli">
+        <code class="subsubcode">display()</code>
+        <p class="description">Displays the text</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">changeFont(font)</code>
+        <p class="description">Changes the font to the specified font</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">changeColor(color)</code>
+        <p class="description">
+          Changes the font color of the text to specified color
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">changeBgColor(bg_color)</code>
+        <p class="description">
+          Changes the background color of the text to specified color
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">changeFontSize(fontSize)</code>
+        <p class="description">
+          Changes the font size of the text to the specified font Size
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">animate(self,loops,stoppingIndex)</code>
+        <p class="description">
+          Animates the text with the specified loops and stoppingIndex is taken
+          if the given loops is not "infinite"
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">replaceTextOnIndex(index,text)</code>
+        <p class="description">Replaces the text on the index to new text</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">changeDuration(duration)</code>
+        <p class="description">Changes the duration of the animation</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">incrementIndex(fontSize)</code>
+        <p class="description">
+          Increments the current index and sets to 0 if index is greater than
+          the size of the list
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">changeFont(font)</code>
+        <p class="description">Changes the font to the specified font</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">setTextList(textList)</code>
+        <p class="description">Changes the texts of animation</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">pauseAnimation(self,stop_on_index)</code>
+        <p class="description">
+          Pauses the animation and stops with the text on the given index if
+          given
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">resumeAnimation()</code>
+        <p class="description">Resumes the animation if paused</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">appendText(text)</code>
+        <p class="description">Appends text to the texts list</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">getCurrentText()</code>
+        <p class="description">Returns the current text</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">setCurrentIndex(index)</code>
+        <p class="description">Sets the current index to the given index</p>
+      </li>
+      <div id="txt">
+        <li>
+          <code class="code"
+            >text(text, position, font, fontSize, color, bg_color)</code
+          >
+          <p class="description">Creates a text</p>
+        </li>
+      </div>
+      <li class="subli">
+        <code class="subsubcode">display()</code>
+        <p class="description">Displays the text</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">changeFont(font)</code>
+        <p class="description">Changes the font to the specified font</p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">changeColor(color)</code>
+        <p class="description">
+          Changes the font color of the text to specified color
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">changeBgColor(bg_color)</code>
+        <p class="description">
+          Changes the background color of the text to specified color
+        </p>
+      </li>
+
+      <li class="subli">
+        <code class="subsubcode">changeFontSize(fontSize)</code>
+        <p class="description">
+          Changes the font size of the text to the specified font Size
+        </p>
+      </li>
+      <div id="img">
+        <li>
+          <code class="code">image(image_path,x=50,y=50,size=None)</code>
+          <p class="description">Creates a image</p>
+        </li>
+      </div>
+      <li class="subli">
+        <code class="subsubcode">draw()</code>
+        <p class="description">Draws the image</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">image()</code>
+        <p class="description">Returns the image</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">getPosition() -> tuple</code>
+        <p class="description">Returns the position of the image</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">setPosition()</code>
+        <p class="description">Sets the position of the image</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">setX(position)</code>
+        <p class="description">Sets the x position of the image</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">setY(position)</code>
+        <p class="description">Sets the y position of the image</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">get_width() -> float|int</code>
+        <p class="description">Returns the width of the image</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">get_height() -> float|int</code>
+        <p class="description">Returns the height of the image</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">setSize()</code>
+        <p class="description">Sets the size of the image</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">setWidth(width)</code>
+        <p class="description">Sets the width of the image</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">setHeight(height)</code>
+        <p class="description">Sets the height of the image</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">mouseHovered() -> bool</code>
+        <p class="description">Returns if the mouse is hovering image</p>
+      </li>
+      <li class="subli">
+        <code class="subsubcode">mousePressedOver() -> bool</code>
+        <p class="description">Returns if the mouse pressed over the image</p>
+      </li>
+      <div id="event">
+        <h2 class="subheading">The EventHandler</h2>
+        <li><code class="code">EventHandler</code></li>
+      </div>
+      <br />
+      <li class="subli">
+        <code class="subcode">event_type_is(event_type) -> bool</code>
+        <p class="description">To check if the event type is the given type</p>
+      </li>
+
+      <li class="subli">
+        <code class="subcode">key_is_down(Key) -> bool</code>
+        <p class="description">to check whether any key is pressed</p>
+      </li>
+
+      <li class="subli">
+        <code class="subcode">key_is_up(Key) -> bool</code>
+        <p class="description">to check whether any key is up</p>
+      </li>
+      <li class="subli">
+        <code class="subcode">get_keys() -> bool</code>
+        <p class="description">Returns the pressed keys</p>
+      </li>
+
+      <li class="subli">
+        <code class="subcode">get_event_type() -> int</code>
+        <p class="description">Returns the event type</p>
+      </li>
+      <li class="subli">
+        <code class="subcode">get_keys() -> bool</code>
+        <p class="description">Returns the pressed keys</p>
+      </li>
+
+      <li class="subli">
+        <code class="subcode">get_event_type(Key) -> bool</code>
+        <p class="description">Returns the event type</p>
+      </li>
+      <li class="subli">
+        <code class="subcode">isEventQuit() -> bool</code>
+        <p class="description">Returns if the event type is QUIT</p>
+      </li>
+
+      <li class="subli">
+        <code class="subcode">enableAutoQuit(margrayClass) -> None</code>
+        <p class="description">
+          Automatically quits the screen when the user tries to close
+        </p>
+      </li>
+      <li class="subli">
+        <code class="subcode">windowExited() -> bool</code>
+        <p class="description">Returns if the window exited</p>
+      </li>
+      <li class="subli">
+        <code class="subcode">isKey(key)</code>
+      </li>
+      <li class="subsubli">
+        <code class="subcode">pressed()</code>
+        <p class="description">Returns if the key is pressed</p>
+      </li>
+
+      <li class="subsubli">
+        <code class="subcode">released()</code>
+        <p class="description">Returns if the key is released</p>
+      </li>
+      <li class="subsubli">
+        <code class="subcode">holded()</code>
+        <p class="description">Returns if the key is holded</p>
+      </li>
+      <div id="keys">
+        <h2 class="subheading">The "Keys" class</h2>
+        <li><code class="code">Keys</code></li>
+      </div> 
+      <br/>     
+      <li class="subli">
+        <code class="subcode">KEY_A</code>
+        
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_B</code>
+      </li>                  
+      <br/>  
+      <li class="subli">
+        <code class="subcode">KEY_C</code>
+      <br/>    
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_D</code>
+      </li> 
+      <br/>      
+      <li class="subli">
+        <code class="subcode">KEY_E</code>
+      <br/>    
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_F</code>
+      </li>                  
+      <br/>  
+      <li class="subli">
+        <code class="subcode">KEY_G</code>
+      <br/>    
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_H</code>
+      </li>  
+      <br/>  
+      <li class="subli">
+        <code class="subcode">KEY_I</code>
+      <br/>    
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_J</code>
+      </li>                  
+      <br/>  
+      <li class="subli">
+        <code class="subcode">KEY_K</code>
+      <br/>    
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_L</code>
+      </li>   
+      <br/>    
+      <li class="subli">
+        <code class="subcode">KEY_M</code>
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_N</code>
+      </li>                  
+      <br/>  
+      <li class="subli">
+        <code class="subcode">KEY_O</code>
+        
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_P</code>
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_Q</code>
+      </li>                  
+      <br/>  
+      <li class="subli">
+        <code class="subcode">KEY_R</code>
+      <br/>    
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_S</code>
+      </li>  
+      <br/>  
+      <li class="subli">
+        <code class="subcode">KEY_T</code>
+      <br/>    
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_U</code>
+      </li>                  
+      <br/>  
+      <li class="subli">
+        <code class="subcode">KEY_V</code>
+      <br/>    
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_W</code>
+      </li>   
+      <br/>    
+      <li class="subli">
+        <code class="subcode">KEY_X</code>
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_Y</code>
+      </li>                  
+      <br/>  
+      <li class="subli">
+        <code class="subcode">KEY_Z</code>
+        
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_0</code>
+      </li>    
+      <br/>  
+      <li class="subli">
+        <code class="subcode">KEY_1</code>
+      <br/>    
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_2</code>
+      </li>                  
+      <br/>  
+      <li class="subli">
+        <code class="subcode">KEY_3</code>
+      <br/>    
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_4</code>
+      </li>   
+      <br/>    
+      <li class="subli">
+        <code class="subcode">KEY_5</code>
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_6</code>
+      </li>                  
+      <br/>  
+      <li class="subli">
+        <code class="subcode">KEY_7</code>
+        
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_8</code>
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_9</code>
+      </li>                  
+      <br/>  
+      <li class="subli">
+        <code class="subcode">RIGTH_NUMBERPAD_0</code>
+      <br/>    
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">RIGTH_NUMBERPAD_1</code>
+      </li>  
+      <br/>  
+      <li class="subli">
+        <code class="subcode">RIGTH_NUMBERPAD_2</code>
+      <br/>    
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">RIGTH_NUMBERPAD_3</code>
+      </li>                  
+      <br/>  
+      <li class="subli">
+        <code class="subcode">RIGTH_NUMBERPAD_4</code>
+      <br/>    
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">RIGTH_NUMBERPAD_5</code>
+      </li>   
+      <br/>    
+      <li class="subli">
+        <code class="subcode">RIGTH_NUMBERPAD_6</code>
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">RIGTH_NUMBERPAD_7</code>
+      </li>                  
+      <br/>  
+      <li class="subli">
+        <code class="subcode">RIGTH_NUMBERPAD_8</code>
+        
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">RIGTH_NUMBERPAD_9</code>
+      </li>                    
+      <br/>
+      <li class="subli">
+        <code class="subcode">KEY_BACKSPACE</code>
+      </li>                  
+      <br/>  
+      <li class="subli">
+        <code class="subcode">KEY_BACKQUOTE</code>
+        
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_LEFTBRACKET</code>
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_RIGHTBRACKET</code>
+      </li>                  
+      <br/>  
+      <li class="subli">
+        <code class="subcode">KEY_SPACE</code>
+      </li>                  
+      <br/>  
+      <li class="subli">
+        <code class="subcode">KEY_RIGHT_ARROW</code>
+        
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_LEFT_ARROW</code>
+      </li>
+      <br/>   
+      <li class="subli">
+        <code class="subcode">KEY_DOWN_ARROW</code>
+      </li>                  
+      <br/> 
+      <li class="subli">
+        <code class="subcode">KEY_UP_ARROW</code>
+      </li>                  
+      <br/>   
+      <div id="oc">
+        <h2 class="subheading">Other Constants</h2>
+      </div>               
+      <br/> 
+      <li class="subli">
+        <code class="subcode">QUIT</code>
+      </li> 
+      <li class="subli">
+        <code class="subcode">KEYDOWN</code>
+      </li>
+      <li class="subli">
+        <code class="subcode">KEYUP</code>
+      </li>
+      <li class="subli">
+        <code class="subcode">MOUSEBUTTONDOWN</code>
+      </li>
+      <li class="subli">
+        <code class="subcode">MOUSEBUTTONUP</code>
+      </li>
+      <li class="subli">
+        <code class="subcode">MOUSEMOTION</code>
+      </li>
+      <li class="subli">
+        <code class="subcode">MOUSEWHEEL</code>
+      </li>
+      <li class="subli">
+        <code class="subcode">NORMAL_FPS</code>
+        <p class="description">Can be used as fps in <a href="#fps" style="color:black">fps().setMaxFPS()</a></p>
+      </li>        
+      <li class="subli">
+        <code class="subcode">LOADING_BASIC_TEXT_ANIMATION</code>
+        <p class="description">Can be used as the text list and the duration in <a href="#at" style="color:black">animated_text()</a> function</p>
+      </li>                                                         
+      <button id="button" class="center" onclick="openExample()" style="width:22%">See Examples</button>
+      <div id="down"></div>
+    </>
+  </body>
+</html>

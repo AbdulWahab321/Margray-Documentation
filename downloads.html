@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="main.js" type="text/javascript"></script>
+    <link rel="icon" href="icon.ico">
+    <title>Margray</title>
+    <link rel="stylesheet" href="./font.css" />
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+  <div style="display: inline">
+      <span style="font-size:30px;cursor:pointer;margin-left:10px;" onclick="openSideNav()">&#9776; Menu</span>
+      <div id="head"><h1 class="heading" id="heading">Margray Game Engine</h1></div>   
+  </div>
+        <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()"
+            >&times;</a
+        >
+        <p id="pages-button">Pages</p>
+        <div id="pages">
+            <a href="home.html">Home</a>
+            <a href="docs.html">Docs</a>
+            <a href="example.html">Examples</a>
+        </div>
+        </div>
+     <div id="main">
+     <h2 id="heading" class="heading">Downloads</h2>
+      <div id="version"><p class="version">Version 0.1</p></div>
+
+    <div id="Modal" class="modal">
+      <span class="close">&times;</span>
+      <span onclick="dwnlinux()"><img class="modal-content" id="img01"/></span>
+      <span onclick="dwnwindows()"><img class="modal-content" id="img02"/></span>
+      <div id="caption"></div>
+    </div>
+      <button id="downloadbtn-installer" class="center" onclick="download('margray_installer.zip','margray_installer.zip')">Download Installer</button>
+      <button id="downloadbtn-zip" class="center" onclick="download('margray_2d.zip','margray_2d.zip')">Download Zip</button>
+  </body>
+</html>

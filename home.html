@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./font.css" />
+    <link rel="icon" href="icon.ico">
+        <script
+      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+      data-auto-a11y="true"
+    ></script>
+    <title>Margray</title>
+    <script src="main.js" type="text/javascript"></script>
+  </head>
+  <body>
+  <div style="display: inline">
+      <span style="font-size:30px;cursor:pointer;margin-left:10px;" onclick="openSideNav()">&#9776; Menu</span>
+      <div id="head"><h1 class="heading" id="heading">Margray Game Engine</h1></div>   
+  </div>
+    <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()"
+            >&times;</a
+        >
+        <p id="pages-button">Pages</p>
+        <div id="pages">
+            <a href="example.html">Examples</a>
+            <a href="downloads.html">Downloads</a>
+            <a href="docs.html">Docs</a>
+        </div>
+    </div>    
+
+    <div id="main">
+      <h2 id="heading" class="heading">Home</h2>
+      <h3 class="home-sub-head">About</h3>
+      <p class="home-para">Margray is a library based on pygame for python game development</p>
+      <p class="home-para"><a href="https://github.com/AbdulWahab321/Margray-Engine" style="color:black">Margray Github Page</a></p>
+      <h3 class="home-sub-head">Developer</h3>
+      <p class="home-para">AbdulWahab321</p>
+      <p class="home-para"><a href="https://github.com/AbdulWahab321" style="color:black">Github Profile<i class="fa fa-user"></i></a></p>
+      <h3 class="home-sub-head">Contributors</h3>
+      <p class="home-para">Bcbro2021</p>
+      <p class="home-para"><a href="https://github.com/bcbro2021" style="color:black">Github Profile<i class="fa fa-user"></i></a></p>
+      <h3 class="home-sub-head">How to Download</h3>
+      <p class="home-para">Margray is not available in Pypi currently</p>
+      <p class="home-para">You can install the installer for it which installs it globally or you can install the zip file which you can use it for one program by extracting it to your prgrams folder</p>
+      <button id="hm-dw-btn" onclick="openDownloads()">Go to Downloads</button>
+    </div>
+  </body>
+</html>
