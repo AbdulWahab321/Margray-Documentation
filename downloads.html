@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="./style.css" />
-    <script src="main.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./font.css" />
     <link rel="icon" href="icon.ico">
     <title>Margray</title>
-    <link rel="stylesheet" href="./font.css" />
-    <link rel="stylesheet" href="./popup.css" />
+    <script src="main.js" type="text/javascript"></script>
+    <link rel="stylesheet"href="highlight.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>    
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+      data-auto-a11y="true"
+    ></script>    
   </head>
   <body>
-  <div style="display: inline">
       <span style="font-size:30px;cursor:pointer;margin-left:10px;" onclick="openSideNav()">&#9776; Menu</span>
-      <div id="head"><h1 class="heading" id="heading">Margray Game Engine</h1></div>   
-  </div>
         <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()"
             >&times;</a
         >
         <p id="pages-button">Pages</p>
         <div id="pages">
-            <a href="home.html">Home</a>
-            <a href="docs.html">Docs</a>
-            <a href="example.html">Examples</a>
+          <button onclick="nwt('home.html')">Home</button>
+          <button class="disabled">Downloads</button>
+          <button onclick="nwt('docs.html')">Docs</button>
+          <button onclick="nwt('example.html')">Examples</button>
+          <button onclick="nwt('credits.html')">Credits</button>
         </div>
+        <p id="pages-button">Preference</p>
+        <button onclick="toggleTheme()">Toggle Theme</button>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         </div>
      <div id="main">
-     <h2 id="heading" class="heading">Downloads</h2>
-      <div id="version"><p class="version">Version 0.1</p></div>
+     <div id="head"><h1 class="heading unselectable" id="heading" style="font-size: 85px;text-decoration: none">Margray 2D</h1></div>
+     <h2 id="sheading" class="sheading unselectable" style="font-family:bertina">Downloads</h2>
+      <div id="version"><p class="version unselectable">Version 0.1</p></div>
 
     <div id="Modal" class="modal">
       <span class="close">&times;</span>
@@ -34,7 +46,30 @@
       <span onclick="dwnwindows()"><img class="modal-content" id="img02"/></span>
       <div id="caption"></div>
     </div>
-      <button id="downloadbtn-installer" class="center" onclick="download('margray_installer.zip','margray_installer.zip')">Download Installer</button>
-      <button id="downloadbtn-zip" class="center" onclick="download('margray_2d.zip','margray_2d.zip')">Download Zip</button>
+      <button id="downloadbtn-installer" class="center" onclick="window.location.assign('installer.html')" style="width:250px">Download Installer</button>
+      <button id="downloadbtn-zip" class="center" onclick="download('margray_2d.zip','margray_2d.zip');window.location.assign('zip.html')" style="width:250px">Download Zip</button>
+      <h3 class="home-sub-head unselectable">Or using Pypi</h3>
+      <pre><code class="powershell">pip install mrgr2d</code></pre>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <script type="text/javascript">
+      
+      if (getTheme() === "dark") {
+        document.body.classList.add("dark-mode");
+        giveWhite()
+      } 
+      
+      else {
+        giveBlack()
+        if(document.body.classList.value.includes("dark-mode")) {
+          document.body.classList.remove("dark-mode");
+          
+        }
+        
+      }
+    </script>
   </body>
 </html>
